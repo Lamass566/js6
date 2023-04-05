@@ -5,8 +5,6 @@ let newUser = {
 
   getLogin: function(fName, lName){
     let sumString = fName[0] + lName;
-    this._firstName = fName;
-    this._lastName = lName;
     alert(sumString);
   }
 }
@@ -41,6 +39,8 @@ Object.defineProperty(newUser, 'lastName',{
 function createNewUser(){
   let fName = prompt("f");
   let lName = prompt("l");
+  newUser._firstName = fName;
+  newUser._lastName = lName;
   newUser.getLogin(fName, lName);
 
   newUser._birthday = prompt("dd.mm.yyyy");
